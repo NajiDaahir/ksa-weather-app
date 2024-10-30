@@ -10,6 +10,10 @@ def get_api_key():
     response = ssm.get_parameter(Name='/weather/api_key', WithDecryption=True)
     return response['Parameter']['Value']
 
+@app.route('/health')
+def health_check():
+    return "Healthy", 200
+
 @app.route('/')
 def home():
     cities = ["Riyadh", "Jeddah", "Madinah", "Makkah"]

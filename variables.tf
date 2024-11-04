@@ -12,3 +12,8 @@ variable "memory" {
   description = "Memory for ECS task"
   default     = "512"
 }
+
+variable "aws-account" {
+  description = "aws account number"
+  default     = "550365445494"
+}

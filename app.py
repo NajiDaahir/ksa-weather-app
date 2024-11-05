@@ -13,9 +13,8 @@ def home():
     cities = ["Riyadh", "Jeddah", "Madinah", "Makkah"]
     weather_info = []
     
-    # Retrieve the API key from the environment variable
     api_key = os.getenv("WEATHER_API_KEY")
-    print(f"API Key Retrieved: {api_key}")  # Log the API key for debugging
+    print(f"API Key Retrieved: {api_key}")  
     
     if not api_key:
         return "API key not found!", 500

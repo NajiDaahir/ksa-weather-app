@@ -41,8 +41,6 @@ resource "aws_ecs_task_definition" "weather_app_task" {
   ])
 }
 
-
-# ECS Service with public subnet configuration
 resource "aws_ecs_service" "weather_app_service" {
   name            = "weather-app-service"
   cluster         = aws_ecs_cluster.weather_app_cluster.id

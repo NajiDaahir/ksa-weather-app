@@ -17,3 +17,8 @@ variable "aws-account" {
   description = "aws account number"
   default     = "550365445494"
 }
+
+data "aws_ssm_parameter" "weather_api_key" {
+  name = "/weather/api_key"
+}
+

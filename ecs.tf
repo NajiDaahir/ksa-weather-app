@@ -26,7 +26,7 @@ resource "aws_ecs_task_definition" "weather_app_task" {
       secrets = [
         {
           name      = "WEATHER_API_KEY",
-          valueFrom = "arn:aws:ssm:${var.region}:${var.aws-account}:parameter/weather/api_key"
+          valueFrom = data.aws_ssm_parameter.weather_api_key.arn
         }
       ],
       logConfiguration = {
